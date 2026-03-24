@@ -83,10 +83,18 @@ class BuscadorDinamicoDockWidget(QDockWidget):
         expresion = f'"{nombre_campo}" LIKE \'%{texto}%\''
         request = QgsFeatureRequest().setFilterExpression(expresion)
         
+        contador = 0
         for feature in capa.getFeatures(request):
+            if contador >= 10:
+                item_info = QListWidgetItem("... (más resultados encontrados, sé más específico)")
+                item_info.setFlags(Qt.NoItemFlags) # No seleccionable
+                self.lista_resultados.addItem(item_info)
+                break
+                
             item = QListWidgetItem(str(feature[nombre_campo]))
             item.setData(Qt.UserRole, feature.id()) # Guardamos el ID del registro
             self.lista_resultados.addItem(item)
+            contador += 1
 
     def zoom_al_registro(self, item):
         fid = item.data(Qt.UserRole)
