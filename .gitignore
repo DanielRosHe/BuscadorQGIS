@@ -1,0 +1,18 @@
+# QGIS Plugin Gitignore
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+.pytest_cache/
+
+# ZIP files (Para que no se suban los paquetes al repo de código si no quieres)
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# QGIS temporary files
+.qgis/
+.vsi/
+.aux/
