@@ -6,6 +6,6 @@
         <version>0.1</version>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <author_name>Daniel</author_name>
-        <download_url>https://github.com/DanielRosHe/BuscadorQGIS/raw/main/buscador_v0.1.zip</download_url>
+        <download_url>https://github.com/DanielRosHe/BuscadorQGIS/raw/main/buscador.zip</download_url>
     </pyqgis_plugin>
 </plugins>
