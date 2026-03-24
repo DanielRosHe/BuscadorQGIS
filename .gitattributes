@@ -1,0 +1,8 @@
+# Excluir archivos del empaquetado (git archive)
+.gitignore export-ignore
+.gitattributes export-ignore
+deploy.ps1 export-ignore
+plugins.xml export-ignore
+LICENSE export-ignore
+buscador.zip export-ignore
+README.md export-ignore
